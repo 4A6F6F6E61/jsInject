@@ -1,5 +1,5 @@
-const speedValue = document.getElementById(speed-value);
-const speedUnits = document.getElementById(speed-units);
+const speedValue = document.getElementById("speed-value");
+const speedUnits = document.getElementById("speed-units");
 
 switch (speedUnits) {
     case "Mbps":
