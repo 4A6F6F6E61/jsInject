@@ -1,2 +1,2 @@
 # jsInject
-- JavaScript code that I inject into an Website
+- Chrome Extension: Fast.com Converter

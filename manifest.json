@@ -1,16 +1,16 @@
 {
-    "name": "InjectorTest",
+    "name": "Fast.com Converter",
     "version": "1.0",
     "manifest_version": 2,
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["test.js"]
+            "js": ["converter.js"]
         }
         
     ],
     "browser_action": {
         "default_popup": "popup.html",
-        "default_title": "test"
+        "default_title": "converter"
     }
 }
