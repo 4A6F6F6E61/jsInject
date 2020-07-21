@@ -9,3 +9,5 @@ switch (speedUnits) {
         speedUnits.innerHTML = "Kb/s";
     break;
 }
+
+speedValue.innerHTML = speedValue.innerHTML / 8;
