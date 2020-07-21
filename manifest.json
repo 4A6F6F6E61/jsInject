@@ -4,8 +4,13 @@
     "manifest_version": 2,
     "content_scripts": [
         {
-            "matches": ["https://fast.com"],
+            "matches": ["<all_urls>"],
             "js": ["test.js"]
         }
-    ]
+        
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "test"
+    }
 }
