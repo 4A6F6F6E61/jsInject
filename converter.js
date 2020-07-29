@@ -8,7 +8,7 @@ let divTest = document.getElementsByClassName("more-info-container")
 let btn = document.createElement("BUTTON")
 let num = null
 
-btn.innerHTML = "Convert"
+btn.innerHTML = "Convert to Byte"
 btn.className = "more-info-link"
 btn.style = "background-color: white; margin-left: 10px;"
 divTest[0].id = "test"
@@ -16,29 +16,26 @@ divTest[0].id = "test"
 document.getElementById("test").style.display = "flex"
 document.getElementById("test").appendChild(btn)
 
-btn.onclick = function(){
+btn.onclick = () => {
+    num = speedValue2.innerHTML / 8
+    speedValue2.innerHTML = num.toFixed(1)
+
+    switch (speedUnits2.innerHTML) {
+        case "Mbps":
+            speedUnits2.innerHTML = "Mb/s"
+        break
+        case "Kbps":
+            speedUnits2.innerHTML = "Kb/s"
+        break
+    }
+
     if (progressCircle.classList.contains("in-progress")){
-        num = speedValue2.innerHTML / 8
-        speedValue2.innerHTML = num.toFixed(1)
-        switch (speedUnits2.innerHTML) {
-            case "Mbps":
-                speedUnits2.innerHTML = "Mb/s"
-            break
-            case "Kbps":
-                speedUnits2.innerHTML = "Kb/s"
-            break
-        }
+        console.log("False")
     } else {
-        num = speedValue2.innerHTML / 8
-        speedValue2.innerHTML = num.toFixed(1)
-        switch (speedUnits2.innerHTML) {
-            case "Mbps":
-                speedUnits2.innerHTML = "Mb/s"
-            break
-            case "Kbps":
-                speedUnits2.innerHTML = "Kb/s"
-            break
-        }
         btn.style.display = "none"
     }
+}
+
+progressCircle.onclick = () => {
+    btn.style.display = "block"
 }
